@@ -1,0 +1,49 @@
+D:\Proyectos Visual Studio 2017\GeneradorCodigo\GeneradorCodigo\bin\Debug\GeneradorCodigo.exe.config
+D:\Proyectos Visual Studio 2017\GeneradorCodigo\GeneradorCodigo\bin\Debug\GeneradorCodigo.exe
+D:\Proyectos Visual Studio 2017\GeneradorCodigo\GeneradorCodigo\bin\Debug\GeneradorCodigo.pdb
+D:\Proyectos Visual Studio 2017\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.csprojAssemblyReference.cache
+D:\Proyectos Visual Studio 2017\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.Form1.resources
+D:\Proyectos Visual Studio 2017\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.Properties.Resources.resources
+D:\Proyectos Visual Studio 2017\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.csproj.GenerateResource.cache
+D:\Proyectos Visual Studio 2017\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.csproj.CoreCompileInputs.cache
+D:\Proyectos Visual Studio 2017\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.exe
+D:\Proyectos Visual Studio 2017\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.pdb
+D:\AlumnoDG\Downloads\GeneradorCodigo\GeneradorCodigo\bin\Debug\GeneradorCodigo.exe.config
+D:\AlumnoDG\Downloads\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.exe
+D:\AlumnoDG\Downloads\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.pdb
+D:\AlumnoDG\Downloads\GeneradorCodigo\GeneradorCodigo\bin\Debug\GeneradorCodigo.exe
+D:\AlumnoDG\Downloads\GeneradorCodigo\GeneradorCodigo\bin\Debug\GeneradorCodigo.pdb
+D:\AlumnoDG\Downloads\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.csprojResolveAssemblyReference.cache
+D:\AlumnoDG\Downloads\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.Form1.resources
+D:\AlumnoDG\Downloads\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.Properties.Resources.resources
+D:\AlumnoDG\Downloads\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.csproj.GenerateResource.Cache
+C:\Users\Administrador\Downloads\GeneradorCodigo\GeneradorCodigo\bin\Debug\GeneradorCodigo.exe.config
+C:\Users\Administrador\Downloads\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.exe
+C:\Users\Administrador\Downloads\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.pdb
+C:\Users\Administrador\Downloads\GeneradorCodigo\GeneradorCodigo\bin\Debug\GeneradorCodigo.exe
+C:\Users\Administrador\Downloads\GeneradorCodigo\GeneradorCodigo\bin\Debug\GeneradorCodigo.pdb
+C:\Users\Administrador\Downloads\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Downloads\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.Form1.resources
+C:\Users\Administrador\Downloads\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.Properties.Resources.resources
+C:\Users\Administrador\Downloads\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.csproj.GenerateResource.Cache
+C:\Users\jordi\Desktop\GeneradorCodigo\GeneradorCodigo\bin\Debug\GeneradorCodigo.exe.config
+C:\Users\jordi\Desktop\GeneradorCodigo\GeneradorCodigo\bin\Debug\GeneradorCodigo.exe
+C:\Users\jordi\Desktop\GeneradorCodigo\GeneradorCodigo\bin\Debug\GeneradorCodigo.pdb
+C:\Users\jordi\Desktop\GeneradorCodigo\GeneradorCodigo\bin\Debug\MySql.Data.dll
+C:\Users\jordi\Desktop\GeneradorCodigo\GeneradorCodigo\bin\Debug\Google.Protobuf.dll
+C:\Users\jordi\Desktop\GeneradorCodigo\GeneradorCodigo\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\jordi\Desktop\GeneradorCodigo\GeneradorCodigo\bin\Debug\MySql.Data.xml
+C:\Users\jordi\Desktop\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.csprojAssemblyReference.cache
+C:\Users\jordi\Desktop\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.Form1.resources
+C:\Users\jordi\Desktop\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.Properties.Resources.resources
+C:\Users\jordi\Desktop\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.csproj.GenerateResource.cache
+C:\Users\jordi\Desktop\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.csproj.CoreCompileInputs.cache
+C:\Users\jordi\Desktop\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.csproj.CopyComplete
+C:\Users\jordi\Desktop\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.exe
+C:\Users\jordi\Desktop\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.pdb
+D:\AlumnoDG\Downloads\GeneradorCodigo\GeneradorCodigo\bin\Debug\Google.Protobuf.dll
+D:\AlumnoDG\Downloads\GeneradorCodigo\GeneradorCodigo\bin\Debug\BouncyCastle.Crypto.dll
+D:\AlumnoDG\Downloads\GeneradorCodigo\GeneradorCodigo\bin\Debug\MySql.Data.xml
+C:\Users\Administrador\Downloads\GeneradorCodigo\GeneradorCodigo\bin\Debug\Google.Protobuf.dll
+C:\Users\Administrador\Downloads\GeneradorCodigo\GeneradorCodigo\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Administrador\Downloads\GeneradorCodigo\GeneradorCodigo\bin\Debug\MySql.Data.xml
