@@ -624,7 +624,7 @@ namespace GeneradorCodigo
                         cadena += "\t\t\t\t\t\t\t" + "obj" + claseEntidad + " = new " + claseEntidad + "();" + "\n";
                         for (int i = 0; i < lstColumna.Count; i++)
                         {
-                            cadena += "\t\t\t\t\t\t" + objeto + "." + lstColumna[i].nombre + " = String.IsNullOrEmpty(dr[\"" + lstColumna[i].nombre + "\"].ToString()) ? ";
+                            cadena += "\t\t\t\t\t\t\t" + "obj" + claseEntidad + "." + lstColumna[i].nombre + " = String.IsNullOrEmpty(dr[\"" + lstColumna[i].nombre + "\"].ToString()) ? ";
                             if (convertirTipoDato(lstColumna[i].tipo) == "String")
                                 cadena += "\"\" : dr[\"" + lstColumna[i].nombre + "\"].ToString();";
                             else if (convertirTipoDato(lstColumna[i].tipo) == "int")
