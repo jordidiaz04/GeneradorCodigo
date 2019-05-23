@@ -594,7 +594,7 @@ namespace GeneradorCodigo
                                 cadena += "false : Convert.ToBoolean(dr[\"" + lstColumna[i].nombre + "\"].ToString());";
                             cadena += "\n";
                         }
-                        cadena += "\t\t\t\t\t\t" + "lst" + claseEntidad + ".Add(" + objeto + ")" + "\n";
+                        cadena += "\t\t\t\t\t\t" + "lst" + claseEntidad + ".Add(" + objeto + ");" + "\n";
                         cadena += "\t\t\t\t\t" + "}" + "\n";
                         cadena += "\t\t\t\t" + "}" + "\n";
                         cadena += "\t\t\t\t" + "catch (Exception ex)" + "\n";

@@ -47,3 +47,15 @@ D:\AlumnoDG\Downloads\GeneradorCodigo\GeneradorCodigo\bin\Debug\MySql.Data.xml
 C:\Users\Administrador\Downloads\GeneradorCodigo\GeneradorCodigo\bin\Debug\Google.Protobuf.dll
 C:\Users\Administrador\Downloads\GeneradorCodigo\GeneradorCodigo\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\Administrador\Downloads\GeneradorCodigo\GeneradorCodigo\bin\Debug\MySql.Data.xml
+D:\AlumnoDG\Downloads\Repositorio\GeneradorCodigo\GeneradorCodigo\bin\Debug\GeneradorCodigo.exe.config
+D:\AlumnoDG\Downloads\Repositorio\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.exe
+D:\AlumnoDG\Downloads\Repositorio\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.pdb
+D:\AlumnoDG\Downloads\Repositorio\GeneradorCodigo\GeneradorCodigo\bin\Debug\GeneradorCodigo.exe
+D:\AlumnoDG\Downloads\Repositorio\GeneradorCodigo\GeneradorCodigo\bin\Debug\GeneradorCodigo.pdb
+D:\AlumnoDG\Downloads\Repositorio\GeneradorCodigo\GeneradorCodigo\bin\Debug\Google.Protobuf.dll
+D:\AlumnoDG\Downloads\Repositorio\GeneradorCodigo\GeneradorCodigo\bin\Debug\BouncyCastle.Crypto.dll
+D:\AlumnoDG\Downloads\Repositorio\GeneradorCodigo\GeneradorCodigo\bin\Debug\MySql.Data.xml
+D:\AlumnoDG\Downloads\Repositorio\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.csprojResolveAssemblyReference.cache
+D:\AlumnoDG\Downloads\Repositorio\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.Form1.resources
+D:\AlumnoDG\Downloads\Repositorio\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.Properties.Resources.resources
+D:\AlumnoDG\Downloads\Repositorio\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.csproj.GenerateResource.Cache
