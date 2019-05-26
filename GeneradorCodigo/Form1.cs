@@ -523,6 +523,8 @@ namespace GeneradorCodigo
                     using (StreamWriter sw = File.CreateText(rutaArchivo))
                     {
                         string cadena = "";
+                        cadena += "using System;" + "\n";
+                        cadena += "\n";
                         cadena += "namespace " + capa + "\n";
                         cadena += "{" + "\n";
                         cadena += "\t" + "public class " + clase + "\n";
@@ -594,7 +596,7 @@ namespace GeneradorCodigo
                                 cadena += "false : Convert.ToBoolean(dr[\"" + lstColumna[i].nombre + "\"].ToString());";
                             cadena += "\n";
                         }
-                        cadena += "\t\t\t\t\t\t" + "lst" + claseEntidad + ".Add(" + objeto + ")" + "\n";
+                        cadena += "\t\t\t\t\t\t" + "lst" + claseEntidad + ".Add(" + objeto + ");" + "\n";
                         cadena += "\t\t\t\t\t" + "}" + "\n";
                         cadena += "\t\t\t\t" + "}" + "\n";
                         cadena += "\t\t\t\t" + "catch (Exception ex)" + "\n";
@@ -624,7 +626,7 @@ namespace GeneradorCodigo
                         cadena += "\t\t\t\t\t\t\t" + "obj" + claseEntidad + " = new " + claseEntidad + "();" + "\n";
                         for (int i = 0; i < lstColumna.Count; i++)
                         {
-                            cadena += "\t\t\t\t\t\t" + objeto + "." + lstColumna[i].nombre + " = String.IsNullOrEmpty(dr[\"" + lstColumna[i].nombre + "\"].ToString()) ? ";
+                            cadena += "\t\t\t\t\t\t\t" + objeto + "." + lstColumna[i].nombre + " = String.IsNullOrEmpty(dr[\"" + lstColumna[i].nombre + "\"].ToString()) ? ";
                             if (convertirTipoDato(lstColumna[i].tipo) == "String")
                                 cadena += "\"\" : dr[\"" + lstColumna[i].nombre + "\"].ToString();";
                             else if (convertirTipoDato(lstColumna[i].tipo) == "int")
@@ -750,10 +752,9 @@ namespace GeneradorCodigo
                         string cadena = "";
                         cadena += "using System;" + "\n";
                         cadena += "using System.Collections.Generic;" + "\n";
-                        cadena += "using System.Data;" + "\n";
                         cadena += "using System.Transactions;" + "\n";
-                        cadena += "using " + capaDatos + "\n";
-                        cadena += "using " + capaEntidad + "\n";
+                        cadena += "using " + capaDatos + ";" + "\n";
+                        cadena += "using " + capaEntidad + ";" + "\n";
                         cadena += "\n";
                         cadena += "namespace " + capa + "\n";
                         cadena += "{" + "\n";
@@ -859,14 +860,15 @@ namespace GeneradorCodigo
                         {
                             cadena += "\t" + lstColumna[i].nombre;
                             if (i < lstColumna.Count - 1) cadena += ",";
+                            cadena += "\n";
                         }
                         cadena += "from " + tabla + "\n";
                         cadena += "go" + "\n";
                         //Funcion obtener
                         cadena += "create procedure " + storeprocedure + "Obtener" + "\n";
                         cadena += "@" + lstColumna[0].nombre.ToLower() + " " + lstColumna[0].tipo;
-                        if (lstColumna[0].tipo != "")
-                            cadena += "(" + lstColumna[0].tamaño + ")";
+                        if (lstColumna[0].tamaño != "")
+                            cadena += "(" + (lstColumna[0].tamaño == "-1" ? "max" : lstColumna[0].tamaño) + ")";
                         cadena += "\n";
                         cadena += "as" + "\n";
                         cadena += "select " + lstColumna[0].nombre + "," + "\n";
@@ -874,6 +876,7 @@ namespace GeneradorCodigo
                         {
                             cadena += "\t" + lstColumna[i].nombre;
                             if (i < lstColumna.Count - 1) cadena += ",";
+                            cadena += "\n";
                         }
                         cadena += "from " + tabla + "\n";
                         cadena += "where " + lstColumna[0].nombre + " = " + "@" + lstColumna[0].nombre.ToLower() + "\n";
@@ -883,8 +886,8 @@ namespace GeneradorCodigo
                         for (int i = 1; i < lstColumna.Count; i++)
                         {
                             cadena += "@" + lstColumna[i].nombre.ToLower() + " " + lstColumna[i].tipo;
-                            if (lstColumna[i].tipo != "")
-                                cadena += "(" + lstColumna[i].tamaño + ")";
+                            if (lstColumna[i].tamaño != "")
+                                cadena += "(" + (lstColumna[i].tamaño == "-1" ? "max" : lstColumna[i].tamaño) + ")";
                             if (i < lstColumna.Count - 1) cadena += ",";
                             cadena += "\n";
                         }
@@ -909,8 +912,8 @@ namespace GeneradorCodigo
                         for (int i = 0; i < lstColumna.Count; i++)
                         {
                             cadena += "@" + lstColumna[i].nombre.ToLower() + " " + lstColumna[i].tipo;
-                            if (lstColumna[i].tipo != "")
-                                cadena += "(" + lstColumna[i].tamaño + ")";
+                            if (lstColumna[i].tamaño != "")
+                                cadena += "(" + (lstColumna[i].tamaño == "-1" ? "max" : lstColumna[i].tamaño) + ")";
                             if (i < lstColumna.Count - 1) cadena += ",";
                             cadena += "\n";
                         }
@@ -928,11 +931,11 @@ namespace GeneradorCodigo
                         //Funcion eliminar
                         cadena += "create procedure " + storeprocedure + "Eliminar" + "\n";
                         cadena += "@" + lstColumna[0].nombre.ToLower() + " " + lstColumna[0].tipo;
-                        if (lstColumna[0].tipo != "")
-                            cadena += "(" + lstColumna[0].tamaño + ")";
+                        if (lstColumna[0].tamaño != "")
+                            cadena += "(" + (lstColumna[0].tamaño == "-1" ? "max" : lstColumna[0].tamaño) + ")";
                         cadena += "\n";
                         cadena += "as" + "\n";
-                        cadena += "delete from " + tabla + " where " + lstColumna[0].nombre + " = @" + lstColumna[0].nombre.ToLower();
+                        cadena += "delete from " + tabla + " where " + lstColumna[0].nombre + " = @" + lstColumna[0].nombre.ToLower() + "\n";
                         cadena += "go" + "\n";
 
                         sw.Write(cadena);
