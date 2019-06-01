@@ -1122,7 +1122,7 @@ namespace GeneradorCodigo
                         cadena += "\t\t\t\t" + "obj" + claseEntidad + " = new " + claseEntidad + "();" + "\n";
                         for (int i = 0; i < lstColumna.Count; i++)
                         {
-                            cadena += "\t\t\t\t" + objeto + ".set" + lstColumna[i].nombre + "(rs.getString(\"" + lstColumna[i].nombre + "\").isEmpty() ? ";
+                            cadena += "\t\t\t\t" + "obj" + claseEntidad + ".set" + lstColumna[i].nombre + "(rs.getString(\"" + lstColumna[i].nombre + "\").isEmpty() ? ";
                             if (convertirTipoDato(lstColumna[i].tipo) == "String")
                                 cadena += "\"\" : rs.getString(\"" + lstColumna[i].nombre + "\"));";
                             else if (convertirTipoDato(lstColumna[i].tipo) == "int")

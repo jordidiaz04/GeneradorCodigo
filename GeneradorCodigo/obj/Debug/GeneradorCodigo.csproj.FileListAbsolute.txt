@@ -71,3 +71,6 @@ D:\AlumnoDG\Downloads\jordidiaz04\GeneradorCodigo\GeneradorCodigo\obj\Debug\Gene
 D:\AlumnoDG\Downloads\jordidiaz04\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.Form1.resources
 D:\AlumnoDG\Downloads\jordidiaz04\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.Properties.Resources.resources
 D:\AlumnoDG\Downloads\jordidiaz04\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.csproj.GenerateResource.Cache
+D:\AlumnoDG\Downloads\Repositorios\GeneradorCodigo\GeneradorCodigo\bin\Debug\GeneradorCodigo.exe.config
+D:\AlumnoDG\Downloads\Repositorios\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.exe
+D:\AlumnoDG\Downloads\Repositorios\GeneradorCodigo\GeneradorCodigo\obj\Debug\GeneradorCodigo.pdb
