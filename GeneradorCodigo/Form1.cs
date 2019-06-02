@@ -439,7 +439,7 @@ namespace GeneradorCodigo
                             if (motordb == "sqlserver")
                             {
                                 generarArchivoConexionAndroid(rutaCapaDatos, txtSolucion.Text.Trim(), txtCapaDatos.Text.Trim(), txtIp.Text.Trim(), cmbBaseDatos.SelectedValue.ToString(), txtUsuario.Text.Trim(), txtContraseña.Text.Trim());
-                                generarArchivoInterfaceAndroid(rutaCapaDatos, txtSolucion.Text.Trim(), txtCapaDatos.Text.Trim(), txtIp.Text.Trim(), cmbBaseDatos.SelectedValue.ToString(), txtUsuario.Text.Trim(), txtContraseña.Text.Trim());
+                                generarArchivoInterfaceAndroid(rutaCapaDatos, txtSolucion.Text.Trim(), txtCapaDatos.Text.Trim());
                                 generarArchivoDatosAndroid(rutaCapaDatos, txtSolucion.Text.Trim(), txtCapaDatos.Text.Trim(), txtCapaEntidad.Text.Trim());
                             }
                             else
@@ -1126,7 +1126,7 @@ namespace GeneradorCodigo
                         cadena += "\t\t\t\t" + "obj" + claseEntidad + " = new " + claseEntidad + "();" + "\n";
                         for (int i = 0; i < lstColumna.Count; i++)
                         {
-                            cadena += "\t\t\t\t" + objeto + ".set" + lstColumna[i].nombre + "(rs.getString(\"" + lstColumna[i].nombre + "\").isEmpty() ? ";
+                            cadena += "\t\t\t\t" + "obj" + claseEntidad + ".set" + lstColumna[i].nombre + "(rs.getString(\"" + lstColumna[i].nombre + "\").isEmpty() ? ";
                             if (convertirTipoDato(lstColumna[i].tipo) == "String")
                                 cadena += "\"\" : rs.getString(\"" + lstColumna[i].nombre + "\"));";
                             else if (convertirTipoDato(lstColumna[i].tipo) == "int")
@@ -1315,7 +1315,7 @@ namespace GeneradorCodigo
             }
         }
 
-        private void generarArchivoInterfaceAndroid(string rutaCarpeta, string solucion, string capaDatos, string ip, string BaseDatos, string user, string pass)
+        private void generarArchivoInterfaceAndroid(string rutaCarpeta, string solucion, string capaDatos)
         {
             string rutaArchivo = rutaCarpeta + @"\OperacionesBD.java";
 
@@ -1419,7 +1419,7 @@ namespace GeneradorCodigo
                         cadena += "\t\t\t\t" + "obj" + claseEntidad + " = new " + claseEntidad + "();" + "\n";
                         for (int i = 0; i < lstColumna.Count; i++)
                         {
-                            cadena += "\t\t\t\t" + objeto + ".set" + lstColumna[i].nombre + "(rs.getString(\"" + lstColumna[i].nombre + "\").isEmpty() ? ";
+                            cadena += "\t\t\t\t" + "obj" + claseEntidad + ".set" + lstColumna[i].nombre + "(rs.getString(\"" + lstColumna[i].nombre + "\").isEmpty() ? ";
                             if (convertirTipoDato(lstColumna[i].tipo) == "String")
                                 cadena += "\"\" : rs.getString(\"" + lstColumna[i].nombre + "\"));";
                             else if (convertirTipoDato(lstColumna[i].tipo) == "int")
@@ -1433,6 +1433,7 @@ namespace GeneradorCodigo
                         cadena += "\t\t\t" + "}" + "\n";
                         cadena += "\t\t" + "}" + "\n";
                         cadena += "\t\t" + "catch(Exception ex){" + "\n";
+                        cadena += "\t\t\t" + "obj" + claseEntidad + " = null;" + "\n";
                         cadena += "\t\t\t" + "System.out.println(\"Error obtener: \" + ex.getMessage());" + "\n";
                         cadena += "\t\t\t" + "ex.printStackTrace();" + "\n";
                         cadena += "\t\t" + "}" + "\n";
@@ -1458,7 +1459,7 @@ namespace GeneradorCodigo
                         {
                             cadena += "\t\t\t" + "cstm.set";
                             cadena += convertirTipoDato(lstColumna[i].tipo) == "String" ? "String" : convertirTipoDato(lstColumna[i].tipo) == "int" ? "Int" : convertirTipoDato(lstColumna[i].tipo) == "double" ? "Double" : "Boolean";
-                            cadena += "(" + (i + 1) + ", " + objeto + ".get" + lstColumna[i].nombre + "());" + "\n";
+                            cadena += "(" + i + ", " + objeto + ".get" + lstColumna[i].nombre + "());" + "\n";
                         }
                         cadena += "\t\t\t" + "if(cstm.executeUpdate() > 0) result = true;" + "\n";
                         cadena += "\t\t" + "}" + "\n";
