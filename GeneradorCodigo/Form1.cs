@@ -1094,6 +1094,7 @@ namespace GeneradorCodigo
                                 cadena += "false : rs.getBoolean(\"" + lstColumna[i].nombre + "\"));";
                             cadena += "\n";
                         }
+                        cadena += "\t\t\t\t" + "lst" + claseEntidad + ".add(" + objeto + ");" + "\n";
                         cadena += "\t\t\t" + "}" + "\n";
                         cadena += "\t\t" + "}" + "\n";
                         cadena += "\t\t" + "catch(Exception ex){" + "\n";
