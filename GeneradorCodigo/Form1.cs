@@ -626,7 +626,7 @@ namespace GeneradorCodigo
                         cadena += "\t\t\t\t\t\t\t" + "obj" + claseEntidad + " = new " + claseEntidad + "();" + "\n";
                         for (int i = 0; i < lstColumna.Count; i++)
                         {
-                            cadena += "\t\t\t\t\t\t\t" + objeto + "." + lstColumna[i].nombre + " = String.IsNullOrEmpty(dr[\"" + lstColumna[i].nombre + "\"].ToString()) ? ";
+                            cadena += "\t\t\t\t\t\t\t" + "obj" + claseEntidad + "." + lstColumna[i].nombre + " = String.IsNullOrEmpty(dr[\"" + lstColumna[i].nombre + "\"].ToString()) ? ";
                             if (convertirTipoDato(lstColumna[i].tipo) == "String")
                                 cadena += "\"\" : dr[\"" + lstColumna[i].nombre + "\"].ToString();";
                             else if (convertirTipoDato(lstColumna[i].tipo) == "int")
@@ -955,7 +955,7 @@ namespace GeneradorCodigo
             using (StreamWriter sw = File.CreateText(rutaArchivo))
             {
                 string cadena = "";
-                cadena += "package " + solucion + "." + capaDatos + ";" + "\n";
+                cadena += "package " + capaDatos + ";" + "\n";
                 cadena += "\n";
                 cadena += "import com.microsoft.sqlserver.jdbc.SQLServerDriver;" + "\n";
                 cadena += "import java.sql.Connection;" + "\n";
@@ -1015,7 +1015,7 @@ namespace GeneradorCodigo
                     using (StreamWriter sw = File.CreateText(rutaArchivo))
                     {
                         string cadena = "";
-                        cadena += "package " + solucion + "." + capa + ";" + "\n";
+                        cadena += "package " + capa + ";" + "\n";
                         cadena += "\n";
                         cadena += "public class " + clase + " {" + "\n";
                         for (int i = 0; i < lstColumna.Count; i++)
@@ -1059,10 +1059,10 @@ namespace GeneradorCodigo
                     using (StreamWriter sw = File.CreateText(rutaArchivo))
                     {
                         string cadena = "";
-                        cadena += "package " + solucion + "." + capa + ";" + "\n";
+                        cadena += "package " + capa + ";" + "\n";
                         cadena += "\n";
-                        cadena += "import " + solucion + "." + capa + ".Conexion;" + "\n";
-                        cadena += "import " + solucion + "." + capaEntidad + "." + claseEntidad + ";" + "\n";
+                        cadena += "import " + capa + ".Conexion;" + "\n";
+                        cadena += "import " + capaEntidad + "." + claseEntidad + ";" + "\n";
                         cadena += "import java.sql.CallableStatement;" + "\n";
                         cadena += "import java.sql.ResultSet;" + "\n";
                         cadena += "import java.util.ArrayList;" + "\n";
@@ -1097,7 +1097,8 @@ namespace GeneradorCodigo
                         cadena += "\t\t\t" + "}" + "\n";
                         cadena += "\t\t" + "}" + "\n";
                         cadena += "\t\t" + "catch(Exception ex){" + "\n";
-                        cadena += "\t\t\t" + "throw new Exception(\"Error función listar: \" + ex.getMessage());" + "\n";
+                        cadena += "\t\t\t" + "System.out.println(\"Error función listar: \" + ex.getMessage());" + "\n";
+                        cadena += "\t\t\t" + "ex.printStackTrace();" + "\n";
                         cadena += "\t\t" + "}" + "\n";
                         cadena += "\t\t" + "finally{" + "\n";
                         cadena += "\t\t\t" + "try{" + "\n";
@@ -1139,7 +1140,8 @@ namespace GeneradorCodigo
                         cadena += "\t\t\t" + "}" + "\n";
                         cadena += "\t\t" + "}" + "\n";
                         cadena += "\t\t" + "catch(Exception ex){" + "\n";
-                        cadena += "\t\t\t" + "throw new Exception(\"Error función obtener: \" + ex.getMessage());" + "\n";
+                        cadena += "\t\t\t" + "System.out.println(\"Error función obtener: \" + ex.getMessage());" + "\n";
+                        cadena += "\t\t\t" + "ex.printStackTrace();" + "\n";
                         cadena += "\t\t" + "}" + "\n";
                         cadena += "\t\t" + "finally{" + "\n";
                         cadena += "\t\t\t" + "try{" + "\n";
@@ -1169,12 +1171,13 @@ namespace GeneradorCodigo
                         {
                             cadena += "\t\t\t" + "cstm.set";
                             cadena += convertirTipoDato(lstColumna[i].tipo) == "String" ? "String" : convertirTipoDato(lstColumna[i].tipo) == "int" ? "Int" : convertirTipoDato(lstColumna[i].tipo) == "double" ? "Double" : "Boolean";
-                            cadena += "(" + (i + 1) + ", obj" + claseEntidad + ".get" + lstColumna[i].nombre + "());" + "\n";
+                            cadena += "(" + (i + 1) + ", " + objeto + ".get" + lstColumna[i].nombre + "());" + "\n";
                         }
                         cadena += "\t\t\t" + "if(cstm.executeUpdate() > 0) result = true;" + "\n";
                         cadena += "\t\t" + "}" + "\n";
                         cadena += "\t\t" + "catch(Exception ex){" + "\n";
-                        cadena += "\t\t\t" + "throw new Exception(\"Error función insertar: \" + ex.getMessage());" + "\n";
+                        cadena += "\t\t\t" + "System.out.println(\"Error función insertar: \" + ex.getMessage());" + "\n";
+                        cadena += "\t\t\t" + "ex.printStackTrace();" + "\n";
                         cadena += "\t\t" + "}" + "\n";
                         cadena += "\t\t" + "finally{" + "\n";
                         cadena += "\t\t\t" + "try{" + "\n";
@@ -1204,12 +1207,13 @@ namespace GeneradorCodigo
                         {
                             cadena += "\t\t\t" + "cstm.set";
                             cadena += convertirTipoDato(lstColumna[i].tipo) == "String" ? "String" : convertirTipoDato(lstColumna[i].tipo) == "int" ? "Int" : convertirTipoDato(lstColumna[i].tipo) == "double" ? "Double" : "Boolean";
-                            cadena += "(" + (i + 1) + ", obj" + claseEntidad + ".get" + lstColumna[i].nombre + "());" + "\n";
+                            cadena += "(" + (i + 1) + ", " + objeto + ".get" + lstColumna[i].nombre + "());" + "\n";
                         }
                         cadena += "\t\t\t" + "if(cstm.executeUpdate() > 0) result = true;" + "\n";
                         cadena += "\t\t" + "}" + "\n";
                         cadena += "\t\t" + "catch(Exception ex){" + "\n";
-                        cadena += "\t\t\t" + "throw new Exception(\"Error función actualizar: \" + ex.getMessage());" + "\n";
+                        cadena += "\t\t\t" + "System.out.println(\"Error función actualizar: \" + ex.getMessage());" + "\n";
+                        cadena += "\t\t\t" + "ex.printStackTrace();" + "\n";
                         cadena += "\t\t" + "}" + "\n";
                         cadena += "\t\t" + "finally{" + "\n";
                         cadena += "\t\t\t" + "try{" + "\n";
@@ -1231,11 +1235,12 @@ namespace GeneradorCodigo
                         cadena += "\t\t\t" + "cstm = cn.conectar().prepareCall(\"{call sp_" + tabla + "_Eliminar(?)}\");" + "\n";
                         cadena += "\t\t\t" + "cstm.set";
                         cadena += convertirTipoDato(lstColumna[0].tipo) == "String" ? "String" : convertirTipoDato(lstColumna[0].tipo) == "int" ? "Int" : convertirTipoDato(lstColumna[0].tipo) == "double" ? "Double" : "Boolean";
-                        cadena += "(1, obj" + claseEntidad + ".get" + lstColumna[0].nombre + "());" + "\n";
+                        cadena += "(1, " + objeto + ".get" + lstColumna[0].nombre + "());" + "\n";
                         cadena += "\t\t\t" + "if(cstm.executeUpdate() > 0) result = true;" + "\n";
                         cadena += "\t\t" + "}" + "\n";
                         cadena += "\t\t" + "catch(Exception ex){" + "\n";
-                        cadena += "\t\t\t" + "throw new Exception(\"Error función actualizar: \" + ex.getMessage());" + "\n";
+                        cadena += "\t\t\t" + "System.out.println(\"Error función actualizar: \" + ex.getMessage());" + "\n";
+                        cadena += "\t\t\t" + "ex.printStackTrace();" + "\n";
                         cadena += "\t\t" + "}" + "\n";
                         cadena += "\t\t" + "finally{" + "\n";
                         cadena += "\t\t\t" + "try{" + "\n";
@@ -1249,6 +1254,7 @@ namespace GeneradorCodigo
                         cadena += "\t\t" + "return result;" + "\n";
                         cadena += "\t" + "}" + "\n";
                         cadena += "}" + "\n";
+                        sw.Write(cadena);
                     }
                 }
             }
